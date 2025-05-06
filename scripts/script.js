@@ -86,5 +86,13 @@ function lancerJeu() {
       afficherProposition(listeMots[i]);
     }
   });
+
+  let listBtnRadio = document.querySelectorAll(".optionSource input");
+  for (let index = 0; index < listBtnRadio.length; index++) {
+    listBtnRadio[index].addEventListener("change", (event) => {
+      console.log(event.target.value);
+    });
+  }
+
   afficherResultat(score, i);
 }
